@@ -6,3 +6,4 @@
 
 (define-key global-map (kbd "C-c C-v") 'my-scroll-up)
 (define-key global-map (kbd "C-c C-S-v") 'my-scroll-down)
+(define-key global-map (kbd "C-c M-b") 'nrepl-use-ns)

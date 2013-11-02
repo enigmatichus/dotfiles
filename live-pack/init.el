@@ -51,3 +51,14 @@
 ;; Provo a rimettere Bookmark+ sbuggato
 ;; FALLITO
 (live-load-config-file "bookmark-plus-conf.el")
+
+;; Define a function to send to nrepl (use <current_file_namespace>)
+
+(defun nrepl-use-ns (ns)
+  "Switch the namespace of the nREPL buffer to NS."
+  (interactive (list (nrepl-current-ns)))
+  (if ns
+      (with-current-buffer (nrepl-current-repl-buffer)
+        (nrepl-send-string
+         (format "(use '%s)" ns) (nrepl-handler (current-buffer))))
+    (message "Sorry, I don't know what the current namespace is.")))
