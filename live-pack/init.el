@@ -62,3 +62,6 @@
         (nrepl-send-string
          (format "(use '%s)" ns) (nrepl-handler (current-buffer))))
     (message "Sorry, I don't know what the current namespace is.")))
+
+;; four-clj 4clojure helper mode
+(live-load-config-file "four-clj-conf.el")
