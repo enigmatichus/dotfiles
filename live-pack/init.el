@@ -14,7 +14,8 @@
 (add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
 ;; Disattiva autocompletamento yas nelle sessioni del terminale
 (add-hook 'term-mode-hook (lambda()
-                            (setq yas-dont-activate t)))
+                            (setq yas-dont-activate t)
+                            (setq show-trailing-whitespace nil)))
 
 (when (require 'yasnippet nil 'noerror)
   (progn
