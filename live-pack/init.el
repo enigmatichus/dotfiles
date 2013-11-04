@@ -12,18 +12,22 @@
 (package-initialize)
 (add-hook 'prog-mode-hook 'turn-on-auto-fill)
 (add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
-;; Disattiva autocompletamento yas nelle sessioni del terminale
+
+;; Disattiva autocompletamento yas e spazi nelle sessioni del terminale
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)
                             (setq show-trailing-whitespace nil)))
 
+;; Carico gli snippet per yas
 (when (require 'yasnippet nil 'noerror)
   (progn
     (yas/load-directory "~/.emacs.d/snippets")
     (yas/load-directory "~/.live-packs/eni-pack/snippets")))
+
 ;; Imposta il saltatore C o solo per la finestra attuale (per evitare
 ;; problemi con DocView)
 (setq ace-jump-mode-scope 'window)
+
 ;; Funzioni custom per scrollare "in remoto" le pagine di DocView
 (defun my-scroll-down (arg)
   (interactive "P")
@@ -43,6 +47,7 @@
 (add-hook 'doc-view-mode-hook (lambda () (undo-tree-mode -1)))
 (add-hook 'doc-view-mode-hook (lambda () (yas-minor-mode -1)))
 (add-hook 'doc-view-mode-hook (lambda () (linum-mode -1)))
+
 ;; Mi sa che non funziona
 (lambda () (doc-view-clear-cache))
 
