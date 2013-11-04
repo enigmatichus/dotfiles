@@ -71,3 +71,16 @@
 
 ;; four-clj 4clojure helper mode
 (live-load-config-file "four-clj-conf.el")
+
+;; display-time-mode in prog-mode
+(add-hook 'prog-mode-hook (lambda ()
+                            (setq display-time-24hr-format t)
+                            (display-time-mode 1)))
+
+;; sml-mode-line on
+(add-hook 'prog-mode-hook (lambda ()
+                            (sml-modeline-mode 1)))
+
+;; clean-mode-line
+;; http://blog.jr0cket.co.uk/2013/01/tweeking-emacs-modeline-for-clojure.html
+(live-load-config-file "clean-mode-line-conf.el")
