@@ -21,8 +21,8 @@ alias spazioderp="sshpass -p "3006198777" ssh root@baubhouse.dyndns.org 'df -h'"
 alias sdripigl="sudo echo 1 > /sys/bus/pci/rescan"
 alias aggiornapy="sh ~/.local/share/aggiornatorePython/aggiornatorePython.sh"
 alias ipythonqt="ipython qtconsole --colors=linux"
-alias emdaemon="emacs --daemon"
-alias emkilldaemon="emacsclient -e '(kill-emacs)'"
+alias emd="emacs --daemon"
+alias emk="emacsclient -e '(kill-emacs)'"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/java/bin:/home/luca/.gem/ruby/2.0.0/bin
-export EDITOR=vim
+export EDITOR="emacsclient --tty"
 autoload -U zcalc
 
 zmodload zsh/complist
