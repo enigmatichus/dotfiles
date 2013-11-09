@@ -84,3 +84,6 @@
 ;; clean-mode-line
 ;; http://blog.jr0cket.co.uk/2013/01/tweeking-emacs-modeline-for-clojure.html
 (live-load-config-file "clean-mode-line-conf.el")
+
+;; Set defaults for org-mode
+(live-load-config-file "org-mode-conf.el")

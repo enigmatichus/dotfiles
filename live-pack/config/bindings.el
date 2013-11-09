@@ -13,3 +13,6 @@
 (define-key global-map (kbd "C-x M-<right>") 'windmove-right)
 (define-key global-map (kbd "C-x M-<up>") 'windmove-up)
 (define-key global-map (kbd "C-x M-<down>") 'windmove-down)
+
+;; org-mode capture
+(define-key global-map (kbd "C-c c") 'org-capture)
