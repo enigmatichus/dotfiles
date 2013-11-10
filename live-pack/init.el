@@ -97,3 +97,7 @@
         (nrepl-send-string
          (format "(use 'clojure.repl)") (nrepl-handler (current-buffer))))
     (message "Sorry, I don't know what the current namespace is.")))
+
+;; Loads solarized-dark theme
+(setq solarized-high-contrast-mode-line t)
+(load-theme 'solarized-dark t)
