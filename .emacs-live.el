@@ -9,5 +9,3 @@
 
 ;; Activate eni-pack
 (live-append-packs '(~/.live-packs/eni-pack))
-
-ciao
