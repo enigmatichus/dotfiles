@@ -87,3 +87,13 @@
 
 ;; Set defaults for org-mode
 (live-load-config-file "org-mode-conf.el")
+
+;; Add another custom function to ask REPL (use 'clojure.repl)
+(defun nrepl-use-repl (ns)
+  "Switch the namespace of the nREPL buffer to NS."
+  (interactive (list (nrepl-current-ns)))
+  (if ns
+      (with-current-buffer (nrepl-current-repl-buffer)
+        (nrepl-send-string
+         (format "(use 'clojure.repl)") (nrepl-handler (current-buffer))))
+    (message "Sorry, I don't know what the current namespace is.")))

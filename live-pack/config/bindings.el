@@ -16,3 +16,6 @@
 
 ;; org-mode capture
 (define-key global-map (kbd "C-c c") 'org-capture)
+
+;; binding for nrepl-use-repl
+(define-key global-map (kbd "C-c M-v") 'nrepl-use-repl)
