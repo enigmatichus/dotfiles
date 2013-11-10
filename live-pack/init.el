@@ -98,6 +98,15 @@
          (format "(use 'clojure.repl)") (nrepl-handler (current-buffer))))
     (message "Sorry, I don't know what the current namespace is.")))
 
-;; Loads solarized-dark theme
+;; Loads solarized-dark theme and set the fucking cursor color to OliveDrab
 (setq solarized-high-contrast-mode-line t)
 (load-theme 'solarized-dark t)
+(add-hook 'window-setup-hook '(lambda () (set-cursor-color "OliveDrab")))
+(add-hook 'after-make-frame-functions '(lambda (f) (with-selected-frame
+                                                       f
+                                                     (set-cursor-color
+                                                      "OliveDrab"))))
+
+;; Sets more contrasted colors for mode-line
+(set-face-attribute 'mode-line nil
+                    :foreground "LightCyan3" :background "DodgerBlue4")
