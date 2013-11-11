@@ -110,3 +110,7 @@
 ;; Sets more contrasted colors for mode-line
 (set-face-attribute 'mode-line nil
                     :foreground "LightCyan3" :background "DodgerBlue4")
+
+;; Since DocView seems to have something wrong about pdf rendered cache
+;; of already-viewed pdfs, this cleans the cache before killing emacs.
+(add-hook 'kill-emacs-hook '(lambda () (doc-view-clear-cache)))
