@@ -114,3 +114,12 @@
 ;; Since DocView seems to have something wrong about pdf rendered cache
 ;; of already-viewed pdfs, this cleans the cache before killing emacs.
 (add-hook 'kill-emacs-hook '(lambda () (doc-view-clear-cache)))
+
+;; Python autocomplete e varie
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+;; Forces fill-prefix to ";; " in clojure-mode (override adaptative
+;; prefix)
+(add-hook 'clojure-mode-hook '(lambda () (setq fill-prefix ";; ")))
