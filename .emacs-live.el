@@ -1,4 +1,4 @@
-;; Use all live-packs except for colour-pack, which I want to override
+;; Override color-pack
 (live-use-packs '(live/foundation-pack
                   live/clojure-pack
                   live/lang-pack
