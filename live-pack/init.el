@@ -111,17 +111,18 @@
 (set-face-attribute 'mode-line nil
                     :foreground "LightCyan3" :background "DodgerBlue4")
 
-;; Since DocView seems to have something wrong about pdf rendered cache
-;; of already-viewed pdfs, this cleans the cache before killing emacs.
-(quote (add-hook 'kill-emacs-hook '(lambda () (find-file "prova")
-                                     (doc-view-minor-mode)
-                                     (doc-view-clear-cache))))
-
 ;; Python autocomplete e varie
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
+;; *** DISABLED SETTINGS ***
 ;; Forces fill-prefix to ";; " in clojure-mode (override adaptative
 ;; prefix)
 (quote (add-hook 'clojure-mode-hook '(lambda () (setq fill-prefix ";; "))))
+
+;; Since DocView seems to have something wrong about pdf rendered cache
+;; of already-viewed pdfs, this cleans the cache before killing emacs.
+(quote (add-hook 'kill-emacs-hook '(lambda () (find-file "prova")
+                                     (doc-view-minor-mode)
+                                     (doc-view-clear-cache))))
