@@ -113,7 +113,9 @@
 
 ;; Since DocView seems to have something wrong about pdf rendered cache
 ;; of already-viewed pdfs, this cleans the cache before killing emacs.
-(add-hook 'kill-emacs-hook '(lambda () (doc-view-clear-cache)))
+(quote (add-hook 'kill-emacs-hook '(lambda () (find-file "prova")
+                                     (doc-view-minor-mode)
+                                     (doc-view-clear-cache))))
 
 ;; Python autocomplete e varie
 (autoload 'jedi:setup "jedi" nil t)
