@@ -124,4 +124,4 @@
 
 ;; Forces fill-prefix to ";; " in clojure-mode (override adaptative
 ;; prefix)
-(add-hook 'clojure-mode-hook '(lambda () (setq fill-prefix ";; ")))
+(quote (add-hook 'clojure-mode-hook '(lambda () (setq fill-prefix ";; "))))
