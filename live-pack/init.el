@@ -126,3 +126,6 @@
 (quote (add-hook 'kill-emacs-hook '(lambda () (find-file "prova")
                                      (doc-view-minor-mode)
                                      (doc-view-clear-cache))))
+
+;; align-cljlet from https://github.com/gstamp/align-cljlet
+(live-load-config-file "align-cljlet-conf.el")
