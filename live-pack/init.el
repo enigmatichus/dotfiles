@@ -129,3 +129,11 @@
 
 ;; align-cljlet from https://github.com/gstamp/align-cljlet
 (live-load-config-file "align-cljlet-conf.el")
+
+;; impaktor-move-end-line: move-end-line ignoring in-line comments
+;; (binding to C-c C-x C-e in bindings.el)
+(defun impaktor-move-end-of-line ()
+  (interactive)
+  (when (comment-search-forward (line-end-position) t)
+    (goto-char (match-beginning 0))
+    (skip-syntax-backward " " (line-beginning-position))))

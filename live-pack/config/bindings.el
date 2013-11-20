@@ -22,3 +22,7 @@
 
 ;; binding for nrepl-use-repl
 (define-key global-map (kbd "C-c M-v") 'nrepl-use-repl)
+
+;; override C-x C-e to impaktor-move-end-of-line (C-c C-e still
+;; original)
+(define-key global-map (kbd "C-c C-x C-e") 'impaktor-move-end-of-line)
