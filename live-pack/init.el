@@ -21,8 +21,8 @@
 ;; Carico gli snippet per yas
 (when (require 'yasnippet nil 'noerror)
   (progn
-    (yas/load-directory "~/.emacs.d/snippets")
-    (yas/load-directory "~/.live-packs/eni-pack/snippets")))
+    (yas-load-directory "~/.emacs.d/snippets")
+    (yas-load-directory "~/.live-packs/eni-pack/snippets")))
 
 ;; Imposta il saltatore C o solo per la finestra attuale (per evitare
 ;; problemi con DocView)
@@ -137,3 +137,16 @@
   (when (comment-search-forward (line-end-position) t)
     (goto-char (match-beginning 0))
     (skip-syntax-backward " " (line-beginning-position))))
+
+;; Easy Spell Check with Flyspell: keybindings and stuff
+(global-set-key (kbd "<f8>") 'ispell-word)
+(global-set-key (kbd "C-S-<f8>") 'flyspell-mode)
+(global-set-key (kbd "C-S-M-<f8>") 'flyspell-buffer)
+(global-set-key (kbd "C-<f8>") 'flyspell-check-previous-highlighted-word)
+(defun flyspell-check-next-highlighted-word ()
+  "Custom function to spell check next highlighted word"
+  (interactive)
+  (flyspell-goto-next-error)
+  (ispell-word)
+  )
+(global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
