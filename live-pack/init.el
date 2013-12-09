@@ -150,3 +150,9 @@
   (ispell-word)
   )
 (global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
+
+;; Disable zone thing
+(setq live-disable-zone t)
+
+;; Set default font
+(set-default-font "Inconsolata-g-11")
