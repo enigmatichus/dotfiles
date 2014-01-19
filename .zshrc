@@ -23,6 +23,8 @@ alias aggiornapy="sh ~/.local/share/aggiornatorePython/aggiornatorePython.sh"
 alias ipythonqt="ipython qtconsole --colors=linux"
 alias emd="emacs --daemon"
 alias emk="emacsclient -e '(kill-emacs)'"
+alias emc="emacsclient -c &"
+alias zyp="sudo zypper"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -48,10 +50,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/java/bin:/home/luca/.gem/ruby/2.0.0/bin
 export EDITOR="emacsclient --tty"
+
+# FOR opensuse steam audio problem
+export SDL_AUDIODRIVER=pulseaudio
 autoload -U zcalc
 
 zmodload zsh/complist
-autoload -U compinit && compinit
+autoload -U compinit
+compinit
 
 ### If you want zsh's completion to pick up new commands in $path automatically
 #### comment out the next line and un-comment the following 5 lines
