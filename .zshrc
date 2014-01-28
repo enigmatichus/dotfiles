@@ -17,7 +17,6 @@ alias minemine="java -jar -Xms1024M -Xmx1024M -Xincgc ~/Programmi/Minecraft_offi
 alias usbripigl="sudo rmmod xhci_hcd && sudo modprobe xhci_hcd"
 alias mineserv="cd ~/Programmi/Minecraft/server && java -jar minecraft_server.jar"
 alias ethripigl="sudo rmmod r8169 && sudo modprobe r8169"
-alias spazioderp="sshpass -p "3006198777" ssh root@baubhouse.dyndns.org 'df -h'"
 alias sdripigl="sudo echo 1 > /sys/bus/pci/rescan"
 alias aggiornapy="sh ~/.local/share/aggiornatorePython/aggiornatorePython.sh"
 alias ipythonqt="ipython qtconsole --colors=linux"
