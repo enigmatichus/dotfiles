@@ -23,7 +23,15 @@ alias ipythonqt="ipython qtconsole --colors=linux"
 alias emd="emacs --daemon"
 alias emk="emacsclient -e '(kill-emacs)'"
 alias emc="emacsclient -c &"
-alias zyp="sudo zypper"
+#alias zyp="sudo zypper"
+alias tranit="translate {=it}"
+#alias zypup="sudo zypper refresh && sudo zypper update"
+#alias matlabsuse="xdg-su -c /usr/local/MATLAB/MATLAB_Production_Server/R2013a/bin/matlab"
+
+# Workaround per acroread:i386 su jessie
+alias acroread="LD_LIBRARY_PATH=/usr/lib/mesa-diverted/i386-linux-gnu/:$LD_LIBRARY_PATH acroread"
+
+alias origin9="WINEPREFIX=/home/luca/.wine32 wine /home/luca/.wine32/drive_c/Program\ Files/OriginLab/Origin9/Origin9.exe"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
