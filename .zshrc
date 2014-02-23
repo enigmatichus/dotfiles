@@ -28,6 +28,9 @@ alias tranit="translate {=it}"
 #alias zypup="sudo zypper refresh && sudo zypper update"
 #alias matlabsuse="xdg-su -c /usr/local/MATLAB/MATLAB_Production_Server/R2013a/bin/matlab"
 alias aggiornadeb="sudo aptitude update && sudo aptitude upgrade"
+alias saptitude="sudo aptitude"
+alias saptget="sudo apt-get"
+alias saptcache="sudo apt-cache"
 
 # Workaround per acroread:i386 su jessie
 alias acroread="LD_LIBRARY_PATH=/usr/lib/mesa-diverted/i386-linux-gnu/:$LD_LIBRARY_PATH acroread"
