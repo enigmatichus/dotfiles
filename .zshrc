@@ -18,15 +18,12 @@ alias usbripigl="sudo rmmod xhci_hcd && sudo modprobe xhci_hcd"
 alias mineserv="cd ~/Programmi/Minecraft/server && java -jar minecraft_server.jar"
 alias ethripigl="sudo rmmod r8169 && sudo modprobe r8169"
 alias sdripigl="sudo echo 1 > /sys/bus/pci/rescan"
-alias aggiornapy="sh ~/.local/share/aggiornatorePython/aggiornatorePython.sh"
 alias ipythonqt="ipython qtconsole --colors=linux"
 alias emd="emacs --daemon"
 alias emk="emacsclient -e '(kill-emacs)'"
 alias emc="emacsclient -c &"
-#alias zyp="sudo zypper"
 alias tranit="translate {=it}"
-#alias zypup="sudo zypper refresh && sudo zypper update"
-#alias matlabsuse="xdg-su -c /usr/local/MATLAB/MATLAB_Production_Server/R2013a/bin/matlab"
+# Debian-specific apt aliases
 alias aggiornadeb="sudo aptitude update && sudo aptitude upgrade"
 alias saptitude="sudo aptitude"
 alias saptget="sudo apt-get"
@@ -34,7 +31,7 @@ alias saptcache="sudo apt-cache"
 
 # Workaround per acroread:i386 su jessie
 alias acroread="LD_LIBRARY_PATH=/usr/lib/mesa-diverted/i386-linux-gnu/:$LD_LIBRARY_PATH acroread"
-
+# Alias per avviare Origin9 (32-bit) dal wineprefix a 32-bit
 alias origin9="WINEPREFIX=/home/luca/.wine32 wine /home/luca/.wine32/drive_c/Program\ Files/OriginLab/Origin9/Origin9.exe"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
