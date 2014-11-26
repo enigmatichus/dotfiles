@@ -19,7 +19,7 @@ alias mineserv="cd ~/Programmi/Minecraft/server && java -jar minecraft_server.ja
 alias ethripigl="sudo rmmod r8169 && sudo modprobe r8169"
 alias sdripigl="sudo echo 1 > /sys/bus/pci/rescan"
 alias ipythonqt="ipython qtconsole --colors=linux"
-alias emd="emacs --daemon"
+alias emd="emacs24 --daemon"
 alias emk="emacsclient -e '(kill-emacs)'"
 alias emc="emacsclient -c &"
 alias tranit="translate {=it}"
@@ -28,6 +28,9 @@ alias aggiornadeb="sudo aptitude update && sudo aptitude upgrade"
 alias saptitude="sudo aptitude"
 alias saptget="sudo apt-get"
 alias saptcache="sudo apt-cache"
+# systemctl sudo aliases
+alias ssyst="sudo systemctl"
+alias sjourn="sudo journalctl"
 
 # Workaround per acroread:i386 su jessie
 alias acroread="LD_LIBRARY_PATH=/usr/lib/mesa-diverted/i386-linux-gnu/:$LD_LIBRARY_PATH acroread"
